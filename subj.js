@@ -178,7 +178,7 @@ function move2(test, color, p) {
 
 
 function Details(td) {
-	var gh = document.getElementById('id03');
+	var gh = document.getElementById('id04');
 	var t1 = document.getElementById('t1');
 	var t2 = document.getElementById('t2');
 	var t3 = document.getElementById('t3');

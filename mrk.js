@@ -102,58 +102,58 @@ for (var i = 1; i <= sn; i++) {
 
 }*/
 
-dataArr.forEach(row=>{
+dataArr.forEach(row=> {
 
-var status=document.getElementById('status');
+	var status = document.getElementById('status');
 
-	var card=document.createElement("div");
-	card.setAttribute("class","card");
-	var on="more("+row.no+")";
-	card.setAttribute("onclick",on)
-	var bod=document.createElement("div");
-	bod.setAttribute("class","card-body");
-	var span=document.createElement("span");
-     
-     span.innerHTML=row.firstname+" "+row.midlename+"<br>"+"score "+row.sum+"<br><span class='btn btn-primary' onclick=''>view</span>";	
-     bod.appendChild(span)
+	var card = document.createElement("div");
+	card.setAttribute("class", "card");
+	var on = "more("+row.no+")";
+	card.setAttribute("onclick", on)
+	var bod = document.createElement("div");
+	bod.setAttribute("class", "card-body");
+	var span = document.createElement("span");
+
+	span.innerHTML = row.firstname+" "+row.midlename+"<br>"+"score "+row.sum+"<br><span class='btn btn-primary' onclick=''>view</span>";
+	bod.appendChild(span)
 	card.appendChild(bod)
 	status.appendChild(card)
 	//function more(td){
-//row = td.parentElement.parentElement;
+	//row = td.parentElement.parentElement;
 	//var index = row.rowIndex - 1;
 	//var dat = dataArr[index];
 	//console.log(row.firstname)
-//}
-	
+	//}
+
 })
-function more(td){
-	var more=document.getElementById('more');
-	var nma=document.getElementById('nmamk');
-	
-	document.getElementById('status').style.display="none";
-	for(var i=0;i<dataArr.length;i++){
-		if(dataArr[i].no==td){
+function more(td) {
+	var more = document.getElementById('more');
+	var nma = document.getElementById('nmamk');
+
+	document.getElementById('status').style.display = "none";
+	for (var i = 0; i < dataArr.length; i++) {
+		if (dataArr[i].no == td) {
 			//more.setAttribute("style","width:60%;height:400px;margin:40px;border-radius:20px;backgroundColor:white")
-			nma.innerHTML="👨‍🦱"+dataArr[i].firstname+" "+dataArr[i].midlename+" "+dataArr[i].lastname;
-			more.innerHTML="score: "+dataArr[i].sum+"<br>"+"age: "+dataArr[i].age+"<br>Gender: "+dataArr[i].gender+"<br>absent: "+dataArr[i].id+"<br>absent date:"+dataArr[i].left;
-		}else{
+			nma.innerHTML = "👨‍🦱"+dataArr[i].firstname+" "+dataArr[i].midlename+" "+dataArr[i].lastname;
+			more.innerHTML = "score: "+dataArr[i].sum+"<br>"+"age: "+dataArr[i].age+"<br>Gender: "+dataArr[i].gender+"<br>absent: "+dataArr[i].id+"<br>absent date:"+dataArr[i].left;
+		} else {
 			//more.innerHTML="sorry no there is same error"
 		}
 	}
 }
-function backme(){
-	var det=document.getElementById('det');
-	var rsid=document.getElementById('status');
-det.style.display="none";
-rsid.style.display="block";
+function backme() {
+	var det = document.getElementById('det');
+	var rsid = document.getElementById('status');
+	det.style.display = "none";
+	rsid.style.display = "block";
 
 }
-function rightside(){
-	var rsid=document.getElementById('rsid');
-	var inc=document.getElementById('sidenav');
-inc.style.display="none"
-	rsid.style.display="block";
-	rsid.style.width="90%";
+function rightside() {
+	var rsid = document.getElementById('rsid');
+	var inc = document.getElementById('sidenav');
+	inc.style.display = "none"
+	rsid.style.display = "block";
+	rsid.style.width = "90%";
 	console.log(rsid.id)
 }
 var dt = "dataArr";
@@ -200,9 +200,9 @@ function sidmute() {
 	var sid = document.getElementById('sidenav');
 	sid.style.display = "block";
 	sid.style.width = "80%"
-var rsid=document.getElementById('rsid');
+	var rsid = document.getElementById('rsid');
 	//var inc=document.getElementById('sidenav');
-rsid.style.display="none"
+	rsid.style.display = "none"
 }
 function getme() {
 	//var tda = document.querySelectorAll('td');
@@ -236,10 +236,9 @@ function getme() {
 					td[j].style.backgroundColor = "#36e612";
 				}
 			}
-           
+
 			/*for (var l = 2; l <= td.length-2; l++) {
 				var k = l-2;
-				
 				var gh = parseInt(tp[0].mperc+parseInt(k)+1);
 				var tf = parseInt(td[l].innerHTML);
 				var om = tf/td[2];
@@ -283,30 +282,30 @@ function gello() {
 			}
 		})
 	}
-var smrp=document.querySelector('input[name=smrp]:checked');
-	if(smrp){
-		document.getElementById('exam').style.display="none";
-	document.getElementById('totv').style.display="block";
-	
-		
+	var smrp = document.querySelector('input[name=smrp]:checked');
+	if (smrp) {
+		document.getElementById('exam').style.display = "none";
+		document.getElementById('totv').style.display = "block";
+
+
 	}
 }
-function reporttotal(dg,ml,row){
-	if(ml==1){
-		if(row.sum>=dg&&row.gender=="male"){
+function reporttotal(dg, ml, row) {
+	if (ml == 1) {
+		if (row.sum >= dg && row.gender == "male") {
 			return true;
-		}else{
+		} else {
 			return false;
 		}
-	}else if(ml==2){
-		if(row.sum>=dg&&row.gender=="female"){
+	} else if (ml == 2) {
+		if (row.sum >= dg && row.gender == "female") {
 			return true;
-		}else{
+		} else {
 			return false;
 		}
 	}
 }
-function thead(){
+function thead() {
 	//var thead1 = document.getElementById('thead');
 
 	var dg = document.getElementById("exnumber").value;
@@ -322,8 +321,8 @@ function thead(){
 	th3.setAttribute("scope",
 		"col");
 	th3.innerHTML = "Lname";
-	
-	
+
+
 	var th7 = document.createElement("th");
 	th7.setAttribute("scope",
 		"col");
@@ -332,8 +331,8 @@ function thead(){
 	th4.setAttribute("scope",
 		"col");
 	th4.innerHTML = "Sid";
-	
-	var th5= document.createElement("th");
+
+	var th5 = document.createElement("th");
 	th5.setAttribute("scope",
 		"col");
 	th5.innerHTML = "Total";
@@ -344,7 +343,7 @@ function thead(){
 	//thead1.appendChild(th31);
 	//thead1.appendChild(th4);
 	thead1.appendChild(th7);
-	thead1.appendChild(th4);
+	thad1.appendChild(th4);
 	thead1.appendChild(th5);
 }
 function thea(dg) {
@@ -365,14 +364,15 @@ function thea(dg) {
 	thead1.appendChild(th1);
 	thead1.appendChild(th2);
 	thead1.appendChild(th3);
-	if(dg==0){
-		var th = document.createElement("th");
+	if (dg == 0) {
+		/*var th = document.createElement("th");
 
 		th.setAttribute("scope", "col");
 
 		var as = "sid";
 
 		th.innerHTML = as;
+		*/
 		var th1 = document.createElement("th");
 
 		th1.setAttribute("scope", "col");
@@ -382,7 +382,7 @@ function thea(dg) {
 		th1.innerHTML = as1;
 
 
-		thead1.appendChild(th);
+		//thead1.appendChild(th);
 		thead1.appendChild(th1)
 	}
 
@@ -401,202 +401,196 @@ function thea(dg) {
 		thead1.appendChild(th);
 	}
 }
-function checkhere(dg,row){
-
-	
-}
+function checkhere(dg, row) {}
 function incomplete(dg, row) {
 	//sessionStorage.setItem("dg",dg);
-	var total=[];
-	var chb1=document.querySelector('input[name=chb1]:checked');
-	if(chb1){
+	var total = [];
+	var chb1 = document.querySelector('input[name=chb1]:checked');
+	if (chb1) {
 		if (dg == 1) {
-		if (row.mark1 > 0) {
-			total.push(row.mark1)
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 2) {
-		if (row.mark1 > 0 && row.mark2 >0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 3) {
-		if (row.mark1 > 0 && row.mark2 > 0 && row.mark3 >0) {
-
-			return true;
-		} else {
-			return false
-		}
-	} else if (dg == 4) {
-		if (row.mark1 > 0 && row.mark2 > 0 && row.mark3 >0 && row.mark4 > 0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 5) {
-		if (row.mark1 >0 && row.mark2 > 0 && row.mark3 > 0 && row.mark4 > 0 && row.mark5 >0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 6) {
-		if (row.mark1 > 0 && row.mark2 >0 && row.mark3> 0 && row.mark4 > 0 && row.mark5 >0 && row.mark6 > 0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 7) {
-		if (row.mark1 > 0 && row.mark2 > 0 && row.mark3 > 0 && row.mark4 > 0 && row.mark5 > 0 && row.mark6 >0 && row.mark7 > 0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 8) {
-		if (row.mark1 > 0 && row.mark2 > 0 &&row.mark3 > 0 && row.mark4 >0 && row.mark5 > 0 && row.mark6 > 0 && row.mark7 >0 && row.mark8 > 0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 9) {
-		if (row.mark1 > 0 && row.mark2 > 0 && row.mark3 > 0 && row.mark4 > 0 && row.mark5 >0 && row.mark6 >0 && row.mark7 >0 && row.mark8 > 0 && row.mark9 > 0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 10) {
-		if (row.mark1 >0 &&row.mark2 > 0 &&row.mark3 >0 && row.mark4 > 0 && row.mark5 > 0 && row.mark6 > 0 && row.mark7 >0 && row.mark8 >0 &&row.mark9 >0 && row.mark10 > 0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 11) {
-		if (row.mark1 >0 && row.mark2 > 0 && row.mark3 >0 && row.mark4 >0 && row.mark5 > 0 && row.mark6 > 0 && row.mark7 > 0 && row.mark8 > 0 &&row.mark9 >0 && row.mark10 >0 && row.mark11 > 0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 12) {
-		if (row.mark1 >0 && row.mark2 >0 && row.mark3 >0 && row.mark4 >0 && row.mark5 >0 && row.mark6 > 0 && row.mark7 > 0 && row.mark8 > 0 && row.mark9 > 0 && row.mark10 > 0 && row.mark11 >0 && row.mark12 > 0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else {
-		alert("your input is invalid")
-	}
-		
-	}else{
-	if (dg == 1) {
-		if (row.mark1 == 0) {
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 2) {
-		if (row.mark1 == 0 || row.mark2 == 0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 3) {
-		if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0) {
-
-			return true;
-		} else {
-			return false
-		}
-	} else if (dg == 4) {
-		if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0 || row.mark4 == 0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 5) {
-		if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0 || row.mark4 == 0 || row.mark5 == 0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 6) {
-		if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0 || row.mark4 == 0 || row.mark5 == 0 || row.mark6 == 0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 7) {
-		if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0 || row.mark4 == 0 || row.mark5 == 0 || row.mark6 == 0 || row.mark7 == 0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 8) {
-		if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0 || row.mark4 == 0 || row.mark5 == 0 || row.mark6 == 0 || row.mark7 == 0 || row.mark8 == 0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 9) {
-		if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0 || row.mark4 == 0 || row.mark5 == 0 || row.mark6 == 0 || row.mark7 == 0 || row.mark8 == 0 || row.mark9 == 0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 10) {
-		if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0 || row.mark4 == 0 || row.mark5 == 0 || row.mark6 == 0 || row.mark7 == 0 || row.mark8 == 0 || row.mark9 == 0 || row.mark10 == 0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 11) {
-		if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0 || row.mark4 == 0 || row.mark5 == 0 || row.mark6 == 0 || row.mark7 == 0 || row.mark8 == 0 || row.mark9 == 0 || row.mark10 == 0 || row.mark11 == 0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if (dg == 12) {
-		if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0 || row.mark4 == 0 || row.mark5 == 0 || row.mark6 == 0 || row.mark7 == 0 || row.mark8 == 0 || row.mark9 == 0 || row.mark10 == 0 || row.mark11 == 0 || row.mark12 == 0) {
-
-			return true;
-		} else {
-			return false;
-		}
-	} else if(dg==0){
-			return true;
-		}
-		
-	
-	else {
-		var dov=document.getElementById("error");
-				dov.innerHTML="Please enter exam number from 1 to 12 to get incomplete students ";
+			if (row.mark1 > 0) {
+				total.push(row.mark1)
+				return true;
+			} else {
+				return false;
 			}
-}
+		} else if (dg == 2) {
+			if (row.mark1 > 0 && row.mark2 > 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 3) {
+			if (row.mark1 > 0 && row.mark2 > 0 && row.mark3 > 0) {
+
+				return true;
+			} else {
+				return false
+			}
+		} else if (dg == 4) {
+			if (row.mark1 > 0 && row.mark2 > 0 && row.mark3 > 0 && row.mark4 > 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 5) {
+			if (row.mark1 > 0 && row.mark2 > 0 && row.mark3 > 0 && row.mark4 > 0 && row.mark5 > 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 6) {
+			if (row.mark1 > 0 && row.mark2 > 0 && row.mark3 > 0 && row.mark4 > 0 && row.mark5 > 0 && row.mark6 > 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 7) {
+			if (row.mark1 > 0 && row.mark2 > 0 && row.mark3 > 0 && row.mark4 > 0 && row.mark5 > 0 && row.mark6 > 0 && row.mark7 > 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 8) {
+			if (row.mark1 > 0 && row.mark2 > 0 && row.mark3 > 0 && row.mark4 > 0 && row.mark5 > 0 && row.mark6 > 0 && row.mark7 > 0 && row.mark8 > 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 9) {
+			if (row.mark1 > 0 && row.mark2 > 0 && row.mark3 > 0 && row.mark4 > 0 && row.mark5 > 0 && row.mark6 > 0 && row.mark7 > 0 && row.mark8 > 0 && row.mark9 > 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 10) {
+			if (row.mark1 > 0 && row.mark2 > 0 && row.mark3 > 0 && row.mark4 > 0 && row.mark5 > 0 && row.mark6 > 0 && row.mark7 > 0 && row.mark8 > 0 && row.mark9 > 0 && row.mark10 > 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 11) {
+			if (row.mark1 > 0 && row.mark2 > 0 && row.mark3 > 0 && row.mark4 > 0 && row.mark5 > 0 && row.mark6 > 0 && row.mark7 > 0 && row.mark8 > 0 && row.mark9 > 0 && row.mark10 > 0 && row.mark11 > 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 12) {
+			if (row.mark1 > 0 && row.mark2 > 0 && row.mark3 > 0 && row.mark4 > 0 && row.mark5 > 0 && row.mark6 > 0 && row.mark7 > 0 && row.mark8 > 0 && row.mark9 > 0 && row.mark10 > 0 && row.mark11 > 0 && row.mark12 > 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			alert("your input is invalid")
+		}
+
+	} else {
+		if (dg == 1) {
+			if (row.mark1 == 0) {
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 2) {
+			if (row.mark1 == 0 || row.mark2 == 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 3) {
+			if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0) {
+
+				return true;
+			} else {
+				return false
+			}
+		} else if (dg == 4) {
+			if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0 || row.mark4 == 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 5) {
+			if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0 || row.mark4 == 0 || row.mark5 == 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 6) {
+			if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0 || row.mark4 == 0 || row.mark5 == 0 || row.mark6 == 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 7) {
+			if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0 || row.mark4 == 0 || row.mark5 == 0 || row.mark6 == 0 || row.mark7 == 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 8) {
+			if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0 || row.mark4 == 0 || row.mark5 == 0 || row.mark6 == 0 || row.mark7 == 0 || row.mark8 == 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 9) {
+			if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0 || row.mark4 == 0 || row.mark5 == 0 || row.mark6 == 0 || row.mark7 == 0 || row.mark8 == 0 || row.mark9 == 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 10) {
+			if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0 || row.mark4 == 0 || row.mark5 == 0 || row.mark6 == 0 || row.mark7 == 0 || row.mark8 == 0 || row.mark9 == 0 || row.mark10 == 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 11) {
+			if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0 || row.mark4 == 0 || row.mark5 == 0 || row.mark6 == 0 || row.mark7 == 0 || row.mark8 == 0 || row.mark9 == 0 || row.mark10 == 0 || row.mark11 == 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 12) {
+			if (row.mark1 == 0 || row.mark2 == 0 || row.mark3 == 0 || row.mark4 == 0 || row.mark5 == 0 || row.mark6 == 0 || row.mark7 == 0 || row.mark8 == 0 || row.mark9 == 0 || row.mark10 == 0 || row.mark11 == 0 || row.mark12 == 0) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else if (dg == 0) {
+			return true;
+		} else {
+			var dov = document.getElementById("error");
+			dov.innerHTML = "Please enter exam number from 1 to 12 to get incomplete students ";
+		}
+	}
 }
 var chexam = document.getElementById('chexam');
 var thead1 = document.getElementById('thead');
 
-var chexam1= document.getElementById('chexam1');
+var chexam1 = document.getElementById('chexam1');
 
 dataArr.forEach(row=> {
 	let newRow1 = table1.insertRow();
@@ -604,171 +598,172 @@ dataArr.forEach(row=> {
 		var mtot = document.getElementById('mtot').value;
 
 		var gender = document.querySelector('input[name=male]:checked').value;
-if(reporttotal(mtot,gender,row)){
-	newRow1.insertCell().textContent = row.no;
-
-
-
-			newRow1.insertCell().textContent = row.firstname;
-			newRow1.insertCell().textContent = row.midlename;
-newRow1.insertCell().textContent=row.gender;
-
-newRow1.insertCell().textContent=row.sid;
-			newRow1.insertCell().textContent = row.sum;
-		
-}
-	
-		
-	});
-	chexam.addEventListener('click', ()=> {
-		var dg = document.getElementById('exnumber').value;
-
-
-		if (incomplete(dg, row)) {
-
+		if (reporttotal(mtot, gender, row)) {
 			newRow1.insertCell().textContent = row.no;
 
 
 
 			newRow1.insertCell().textContent = row.firstname;
 			newRow1.insertCell().textContent = row.midlename;
+			newRow1.insertCell().textContent = row.gender;
 
-			//for(var i=1;i<=dg;i++){
-			//var mark+i="mark"+i;
-			if(dg==0){
-				newRow1.insertCell().textContent=row.sid;
+			newRow1.insertCell().textContent = row.sid;
 			newRow1.insertCell().textContent = row.sum;
-			
-			}		if (dg == 1) {
-				newRow1.insertCell().textContent = row.mark1;
-			} else if (dg == 2) {
-				newRow1.insertCell().textContent = row.mark1;
-				newRow1.insertCell().textContent = row.mark2;
-
-			} else if (dg == 3) {
-				newRow1.insertCell().textContent = row.mark1;
-				newRow1.insertCell().textContent = row.mark2;
-				newRow1.insertCell().textContent = row.mark3;
-
-			} else if (dg == 4) {
-				newRow1.insertCell().textContent = row.mark1;
-				newRow1.insertCell().textContent = row.mark2;
-				newRow1.insertCell().textContent = row.mark3;
-				newRow1.insertCell().textContent = row.mark4;
-
-			} else if (dg == 5) {
-				newRow1.insertCell().textContent = row.mark1;
-				newRow1.insertCell().textContent = row.mark2;
-				newRow1.insertCell().textContent = row.mark3;
-				newRow1.insertCell().textContent = row.mark4;
-				newRow1.insertCell().textContent = row.mark5;
-
-			} else if (dg == 6) {
-				newRow1.insertCell().textContent = row.mark1;
-				newRow1.insertCell().textContent = row.mark2;
-				newRow1.insertCell().textContent = row.mark3;
-				newRow1.insertCell().textContent = row.mark4;
-				newRow1.insertCell().textContent = row.mark5;
-				newRow1.insertCell().textContent = row.mark6;
-
-			} else if (dg == 7) {
-				newRow1.insertCell().textContent = row.mark1;
-				newRow1.insertCell().textContent = row.mark2;
-				newRow1.insertCell().textContent = row.mark3;
-				newRow1.insertCell().textContent = row.mark4;
-				newRow1.insertCell().textContent = row.mark5;
-				newRow1.insertCell().textContent = row.mark6;
-				newRow1.insertCell().textContent = row.mark7;
-
-			} else if (dg == 8) {
-				newRow1.insertCell().textContent = row.mark1;
-				newRow1.insertCell().textContent = row.mark2;
-				newRow1.insertCell().textContent = row.mark3;
-				newRow1.insertCell().textContent = row.mark4;
-				newRow1.insertCell().textContent = row.mark5;
-				newRow1.insertCell().textContent = row.mark6;
-				newRow1.insertCell().textContent = row.mark7;
-				newRow1.insertCell().textContent = row.mark8;
-
-
-
-			} else if (dg == 9) {
-				newRow1.insertCell().textContent = row.mark1;
-				newRow1.insertCell().textContent = row.mark2;
-				newRow1.insertCell().textContent = row.mark3;
-				newRow1.insertCell().textContent = row.mark4;
-				newRow1.insertCell().textContent = row.mark5;
-				newRow1.insertCell().textContent = row.mark6;
-				newRow1.insertCell().textContent = row.mark7;
-				newRow1.insertCell().textContent = row.mark8;
-				newRow1.insertCell().textContent = row.mark9;
-
-
-
-			} else if (dg == 10) {
-				newRow1.insertCell().textContent = row.mark1;
-				newRow1.insertCell().textContent = row.mark2;
-				newRow1.insertCell().textContent = row.mark3;
-				newRow1.insertCell().textContent = row.mark4;
-				newRow1.insertCell().textContent = row.mark5;
-				newRow1.insertCell().textContent = row.mark6;
-				newRow1.insertCell().textContent = row.mark7;
-				newRow1.insertCell().textContent = row.mark8;
-				newRow1.insertCell().textContent = row.mark7;
-				newRow1.insertCell().textContent = row.mark8;
-
-				newRow1.insertCell().textContent = row.mark9;
-				newRow1.insertCell().textContent = row.mark10;
-
-
-			} else if (dg == 11) {
-				newRow1.insertCell().textContent = row.mark1;
-				newRow1.insertCell().textContent = row.mark2;
-				newRow1.insertCell().textContent = row.mark3;
-				newRow1.insertCell().textContent = row.mark4;
-				newRow1.insertCell().textContent = row.mark5;
-				newRow1.insertCell().textContent = row.mark6;
-				newRow1.insertCell().textContent = row.mark7;
-				newRow1.insertCell().textContent = row.mark8;
-				newRow1.insertCell().textContent = row.mark9;
-				newRow1.insertCell().textContent = row.mark10;
-				newRow1.insertCell().textContent = row.mark11;
-				//newRow1.insertCell().textContent = row.mark12;
-
-
-
-			} else if (dg == 12) {
-				newRow1.insertCell().textContent = row.mark1;
-				newRow1.insertCell().textContent = row.mark2;
-				newRow1.insertCell().textContent = row.mark3;
-				newRow1.insertCell().textContent = row.mark4;
-				newRow1.insertCell().textContent = row.mark5;
-				newRow1.insertCell().textContent = row.mark6;
-				newRow1.insertCell().textContent = row.mark7;
-				newRow1.insertCell().textContent = row.mark8;
-				newRow1.insertCell().textContent = row.mark9;
-				newRow1.insertCell().textContent = row.mark10;
-				newRow1.insertCell().textContent = row.mark11;
-				newRow1.insertCell().textContent = row.mark12;
-
-
-
-			} else {
-				var dov=document.getElementById("error");
-				dov.innerHTML="Please enter exam number from 1 to 12 to get incomplete students ";
-			}
 
 		}
 
 
+	});
+	chexam.addEventListener('click',
+		()=> {
+			var dg = document.getElementById('exnumber').value;
+
+
+			if (incomplete(dg, row)) {
+
+				newRow1.insertCell().textContent = row.no;
+
+
+
+				newRow1.insertCell().textContent = row.firstname;
+				newRow1.insertCell().textContent = row.midlename;
+
+				//for(var i=1;i<=dg;i++){
+				//var mark+i="mark"+i;
+				if (dg == 0) {
+					//newRow1.insertCell().textContent = row.sid;
+					newRow1.insertCell().textContent = row.sum;
+
+				} if (dg == 1) {
+					newRow1.insertCell().textContent = row.mark1;
+				} else if (dg == 2) {
+					newRow1.insertCell().textContent = row.mark1;
+					newRow1.insertCell().textContent = row.mark2;
+
+				} else if (dg == 3) {
+					newRow1.insertCell().textContent = row.mark1;
+					newRow1.insertCell().textContent = row.mark2;
+					newRow1.insertCell().textContent = row.mark3;
+
+				} else if (dg == 4) {
+					newRow1.insertCell().textContent = row.mark1;
+					newRow1.insertCell().textContent = row.mark2;
+					newRow1.insertCell().textContent = row.mark3;
+					newRow1.insertCell().textContent = row.mark4;
+
+				} else if (dg == 5) {
+					newRow1.insertCell().textContent = row.mark1;
+					newRow1.insertCell().textContent = row.mark2;
+					newRow1.insertCell().textContent = row.mark3;
+					newRow1.insertCell().textContent = row.mark4;
+					newRow1.insertCell().textContent = row.mark5;
+
+				} else if (dg == 6) {
+					newRow1.insertCell().textContent = row.mark1;
+					newRow1.insertCell().textContent = row.mark2;
+					newRow1.insertCell().textContent = row.mark3;
+					newRow1.insertCell().textContent = row.mark4;
+					newRow1.insertCell().textContent = row.mark5;
+					newRow1.insertCell().textContent = row.mark6;
+
+				} else if (dg == 7) {
+					newRow1.insertCell().textContent = row.mark1;
+					newRow1.insertCell().textContent = row.mark2;
+					newRow1.insertCell().textContent = row.mark3;
+					newRow1.insertCell().textContent = row.mark4;
+					newRow1.insertCell().textContent = row.mark5;
+					newRow1.insertCell().textContent = row.mark6;
+					newRow1.insertCell().textContent = row.mark7;
+
+				} else if (dg == 8) {
+					newRow1.insertCell().textContent = row.mark1;
+					newRow1.insertCell().textContent = row.mark2;
+					newRow1.insertCell().textContent = row.mark3;
+					newRow1.insertCell().textContent = row.mark4;
+					newRow1.insertCell().textContent = row.mark5;
+					newRow1.insertCell().textContent = row.mark6;
+					newRow1.insertCell().textContent = row.mark7;
+					newRow1.insertCell().textContent = row.mark8;
+
+
+
+				} else if (dg == 9) {
+					newRow1.insertCell().textContent = row.mark1;
+					newRow1.insertCell().textContent = row.mark2;
+					newRow1.insertCell().textContent = row.mark3;
+					newRow1.insertCell().textContent = row.mark4;
+					newRow1.insertCell().textContent = row.mark5;
+					newRow1.insertCell().textContent = row.mark6;
+					newRow1.insertCell().textContent = row.mark7;
+					newRow1.insertCell().textContent = row.mark8;
+					newRow1.insertCell().textContent = row.mark9;
+
+
+
+				} else if (dg == 10) {
+					newRow1.insertCell().textContent = row.mark1;
+					newRow1.insertCell().textContent = row.mark2;
+					newRow1.insertCell().textContent = row.mark3;
+					newRow1.insertCell().textContent = row.mark4;
+					newRow1.insertCell().textContent = row.mark5;
+					newRow1.insertCell().textContent = row.mark6;
+					newRow1.insertCell().textContent = row.mark7;
+					newRow1.insertCell().textContent = row.mark8;
+					newRow1.insertCell().textContent = row.mark7;
+					newRow1.insertCell().textContent = row.mark8;
+
+					newRow1.insertCell().textContent = row.mark9;
+					newRow1.insertCell().textContent = row.mark10;
+
+
+				} else if (dg == 11) {
+					newRow1.insertCell().textContent = row.mark1;
+					newRow1.insertCell().textContent = row.mark2;
+					newRow1.insertCell().textContent = row.mark3;
+					newRow1.insertCell().textContent = row.mark4;
+					newRow1.insertCell().textContent = row.mark5;
+					newRow1.insertCell().textContent = row.mark6;
+					newRow1.insertCell().textContent = row.mark7;
+					newRow1.insertCell().textContent = row.mark8;
+					newRow1.insertCell().textContent = row.mark9;
+					newRow1.insertCell().textContent = row.mark10;
+					newRow1.insertCell().textContent = row.mark11;
+					//newRow1.insertCell().textContent = row.mark12;
+
+
+
+				} else if (dg == 12) {
+					newRow1.insertCell().textContent = row.mark1;
+					newRow1.insertCell().textContent = row.mark2;
+					newRow1.insertCell().textContent = row.mark3;
+					newRow1.insertCell().textContent = row.mark4;
+					newRow1.insertCell().textContent = row.mark5;
+					newRow1.insertCell().textContent = row.mark6;
+					newRow1.insertCell().textContent = row.mark7;
+					newRow1.insertCell().textContent = row.mark8;
+					newRow1.insertCell().textContent = row.mark9;
+					newRow1.insertCell().textContent = row.mark10;
+					newRow1.insertCell().textContent = row.mark11;
+					newRow1.insertCell().textContent = row.mark12;
+
+
+
+				} else {
+					var dov = document.getElementById("error");
+					dov.innerHTML = "Please enter exam number from 1 to 12 to get incomplete students ";
+				}
+
+			}
 
 
 
 
 
 
-		//}
-	})
+
+
+			//}
+		})
 	let newRow = table.insertRow();
 
 	newRow.insertCell().textContent = row.no = ++number;

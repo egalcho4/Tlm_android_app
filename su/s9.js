@@ -339,13 +339,13 @@ function thea(dg) {
 	thead1.appendChild(th2);
 	thead1.appendChild(th3);
 	if (dg == 0) {
-		var th = document.createElement("th");
+		/*var th = document.createElement("th");
 
 		th.setAttribute("scope", "col");
 
 		var as = "sid";
 
-		th.innerHTML = as;
+		th.innerHTML = as;*/
 		var th1 = document.createElement("th");
 
 		th1.setAttribute("scope", "col");
@@ -355,7 +355,7 @@ function thea(dg) {
 		th1.innerHTML = as1;
 
 
-		thead1.appendChild(th);
+		//thead1.appendChild(th);
 		thead1.appendChild(th1)
 	}
 
