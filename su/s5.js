@@ -11,6 +11,18 @@ var sn = localStorage.getItem("mn5");
 var selectedRow = null;
 var number = 0;
 var rank = 0;
+var sam=0;
+  var lan=0
+  
+  for(var i=0;i<dataArr.length;i++){
+   sum1=parseInt(dataArr[i].sum)
+   sam=parseInt(sam)+sum1
+   lan=dataArr.length
+ 
+  }
+  var avrpo=document.getElementById('avrpo');
+  var avr= Math.round(sam/parseInt(lan))
+avrpo.innerHTML="Average Score=" +avr;
 
 function auto() {}
 var search = document.getElementById('search');

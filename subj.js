@@ -39,6 +39,12 @@ var min=document.getElementById('min1').value;
    var nfm=[];
    var max1 =parseInt(max);
    var min1=parseInt(min);
+   function avarage(){
+   for(var i=0;i<=marko.length;i++){
+    	console.log(marko[i].sum);
+    }
+   }
+   setTimeout(function)
     marko.forEach(row=>{
     if(row.gender=="female"){
         nfm.push(row.av);
@@ -54,6 +60,7 @@ var min=document.getElementById('min1').value;
         }
        
     })
+    
     //console.log(fm.length )
     //console/.log(nfm.length)
     var tabl=document.querySelector("#repot tbody");

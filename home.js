@@ -120,6 +120,7 @@ pr.addEventListener('click', ()=> {
 var evtext=document.getElementById("ol");
 function formevent(ev) {
 	evp.push(Object.fromEntries(new FormData(proforme).entries()))
+	
 	localStorage.setItem("event", JSON.stringify(evp));
 	alert("saved successfully");
 	document.getElementById('evfrm').style.display = "none";
