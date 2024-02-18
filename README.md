@@ -3,12 +3,12 @@
 Teacher load Minimizer is software project developed by only javascript,html,css and it easily converted to android app
 or host to and static web hostenger this app helps any one to store his student information on localstorage and manupulate those data easily offline
 and the basic function of this project are:
-# Resgistration
-# Mark Management
-# Attendance Control
-# Rank student
-# Generate Report
-# Final save data as csv file
+> Resgistration
+> Mark Management
+> Attendance Control
+> Rank student
+> Generate Report
+> Final save data as csv file
 This is little about Tlm project 
 
 ## Installation
