@@ -43,4 +43,4 @@ Please make sure to update tests as appropriate.
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT]([https://choosealicense.com/licenses/mit/](https://opensource.org/license/osl-2-1/)https://opensource.org/license/osl-2-1/)
