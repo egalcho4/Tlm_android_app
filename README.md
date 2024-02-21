@@ -16,13 +16,13 @@ This is little about Tlm project
 To use this software you have to build it as android app or web app
 To convert apk file use android studio web view widget
 Or clone this project and click on 
-```bash
+```bash html
 Index.html
 ```
 #don’t forgot this 
 If you change browser you will lose your data
 ## Usage
-‘’’html 
+‘’’bash html 
 Sample html code
 <!DOCTYPE html>
 <html>
@@ -55,7 +55,7 @@ Sample html code
 </body>
 </html>
 ‘’’
-```JavaScript
+```bash JavaScript
 Const datastored=JSON.parse(localstorage.getItem(‘datastored’ ||’[]’));
 //We get data from local storage like this
 Const form=document.forms[‘form_name’],
