@@ -11,28 +11,73 @@ and the basic function of this project are:
 > Final save data as csv file
 This is little about Tlm project 
 
+
 ## Installation
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
+To use this software you have to build it as android app or web app
+To convert apk file use android studio web view widget
+Or clone this project and click on 
 ```bash
-pip install foobar
+Index.html
 ```
-
+#don’t forgot this 
+If you change browser you will lose your data
 ## Usage
+‘’’html 
+Sample html code
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<div class="data-intery">
+		<form action="" method="" name="form" onsubmit="return submite()">
+			<label>username</label>
+			<input type="text" name="username">
+			<label>first name</label>
+			<input type="text" name="fname">
+			<label>laste name</label>
+			<input type="text" name="lname">
+			<button type="submit">add new record</button>
+		</form>
+	</div>
+	<div class="output">
+		<table>
+			<thead>
+				<th>add same thing</th>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
 
-```python
-import foobar
+</body>
+</html>
+‘’’
+```JavaScript
+Const datastored=JSON.parse(localstorage.getItem(‘datastored’ ||’[]’));
+//We get data from local storage like this
+Const form=document.forms[‘form_name’],
+//we get form data by using this format
+Function submite(){
+datastored.push(Object.fromEntries(new FormData(form).entries()));
+//first we push data like this to insert new array element before saving to database
+localStorage.setItem(‘datastored’,JSON.stringfiey(datastored’));
+// now our data saved successfully
+}
+//for output
+Const table=document.queryselector(‘table tbody’);
+Datastored.forEach(row=>{
+Let newrow=table.insertRow();
+newrow.insertNewCell().textContent=row.usename;
+newrow.insertNewCell().textContent=row.fname;
+newrow.insertNewCell().textContent=row.lname;
 
-# returns 'words'
-foobar.pluralize('word')
 
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
+})
 ```
+##
 
 ## Contributing
 
@@ -43,4 +88,4 @@ Please make sure to update tests as appropriate.
 
 ## License
 
-[MIT]([https://choosealicense.com/licenses/mit/](https://opensource.org/license/osl-2-1/)https://opensource.org/license/osl-2-1/)
+[MIT](https://choosealicense.com/licenses/mit/)
