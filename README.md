@@ -22,7 +22,7 @@ Index.html
 #don’t forgot this 
 If you change browser you will lose your data
 ## Usage
-'''bash 
+```bash 
 Sample html code
 <!DOCTYPE html>
 <html>
@@ -54,7 +54,8 @@ Sample html code
 
 </body>
 </html>
-'''
+```
+
 ```bash 
 Const datastored=JSON.parse(localstorage.getItem(‘datastored’ ||’[]’));
 //We get data from local storage like this
